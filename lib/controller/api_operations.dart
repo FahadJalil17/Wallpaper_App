@@ -15,7 +15,7 @@ class ApiOperations{
     await http.get(Uri.parse("https://api.pexels.com/v1/curated"),
     // we will pass authorization key in headers
       headers: {
-      "Authorization" : "3aB8L87dOdbM2UKq3uNnwBHDNgLXgj2SI5hX7jsirm4DRKhmKYcp904P"
+      "Authorization" : ""
         }
     ).then((value){
       Map<String, dynamic> jsonData = jsonDecode(value.body);
@@ -32,10 +32,10 @@ class ApiOperations{
 
 
   static Future<List<PhotosModel>> searchWallpapers(String query) async{
-    await http.get(Uri.parse("https://api.pexels.com/v1/search?query=$query&per_page=30&page=1"),
+    await http.get(Uri.parse(""),
         // we will pass authorization key in headers
         headers: {
-          "Authorization" : "3aB8L87dOdbM2UKq3uNnwBHDNgLXgj2SI5hX7jsirm4DRKhmKYcp904P"
+          "Authorization" : ""
         }
     ).then((value){
       Map<String, dynamic> jsonData = jsonDecode(value.body);
